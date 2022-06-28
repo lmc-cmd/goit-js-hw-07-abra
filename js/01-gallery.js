@@ -27,7 +27,6 @@ galleryEl.append(...makeGallery);
 
 galleryEl.addEventListener(`click`, (e) => {
   if (e.target.nodeName === `DIV`) {
-    console.log(e.target);
     return;
   }
   const instance = basicLightbox.create(
@@ -39,7 +38,6 @@ galleryEl.addEventListener(`click`, (e) => {
   );
   instance.show(instance);
   const modalEl = document.querySelector(".basicLightbox");
-  // console.dir(modalEl);
   modalEl.addEventListener(`click`, (e) => {
     if (e.target.nodeName === `IMG`) {
       console.dir(Event);

@@ -25,6 +25,74 @@ const makeGallery = galleryItems.map((e) => {
 });
 galleryEl.append(...makeGallery);
 
+galleryEl.addEventListener(`click`, (e) => {
+  if (e.target.nodeName === `DIV`) {
+    console.log(e.target);
+    return;
+  }
+  const instance = basicLightbox.create(
+    `<div class="modal">
+    <img
+    src=${e.target.dataSource}
+    />
+    </div>`
+  );
+  instance.show(instance);
+  const modalEl = document.querySelector(".basicLightbox");
+  // console.dir(modalEl);
+  modalEl.addEventListener(`click`, (e) => {
+    if (e.target.nodeName === `IMG`) {
+      console.dir(Event);
+      instance.close(instance);
+      modalEl.removeEventListener;
+    }
+  });
+});
+
+// const modalEl = document.querySelector(".basicLightbox");
+// // console.dir(modalEl);
+// modalEl.addEventListener(`click`, (e) => {
+//   if (e.target.nodeName === `IMG`) {
+//     instance.close(instance);
+//   }
+// });
+opacity: "1";
+// const ModalEl = document.querySelector(
+//   "body > div.basicLightbox.basicLightbox--visible > div > div > img"
+// );
+// ModalEl.addEventListener(`click`, () => instance.close(instance));
+
+// if (instance.visible === true) {
+//   instance.close(instance);
+// }
+// if (instance.keyup)
+// instance.close(instance);
+// document
+//   .querySelector(
+//     "body > div.basicLightbox.basicLightbox--visible > div > div > img"
+//   )
+//   .addEventListener((e) => {
+//     if (e == 27) {
+//       instance.close(instance);
+//     }
+//   });
+//  $(document).keyup(function(e) {
+//       if (e.keyCode == 27) { // esc keycode
+//           $('#lightboxId').hide();
+//           $('#mask').remove();
+//       }
+
+// console.dir(instance);
+// if (e.currentTarget.nodeName === `IMG`) {
+//   instance.close(instance);
+// }
+
+// console.log(e.currentTarget.nodeName);
+// instance.remove(`basicLightbox--visible`);
+// return instance;
+// document.querySelector("body > div.basicLightbox.basicLightbox--visible");
+// const htmlInstance = basicLightbox.create(document.querySelector("#html"));
+
 // const basicLightbox = require("basiclightbox");
 // console.dir(makeGallery);
 
@@ -81,4 +149,4 @@ galleryEl.append(...makeGallery);
 //   </div>`;
 // }
 
-// const htmlInstance = basicLightbox.create(document.querySelector("#html"));
+//

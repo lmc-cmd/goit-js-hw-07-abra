@@ -1,8 +1,6 @@
 import { galleryItems } from "./gallery-items.js";
 // Change code below this line
 
-console.log(galleryItems);
-
 const galleryEl = document.querySelector(".gallery");
 
 const makeGallery = galleryItems.map((e) => {
@@ -34,37 +32,3 @@ new SimpleLightbox(".gallery a", {
   captionData: "alt",
   navtext: ["<~", "~>"],
 });
-
-// {
-/* <a class="gallery__item" href="large-image.jpg">
-  <img class="gallery__image" src="small-image.jpg" alt="Image description" />
-</a>;
- */
-// }
-
-// galleryEl.addEventListener(`click`, (e) => {
-//   gallery.on("show.simplelightbox");
-// });
-// let gallery = new SimpleLightbox(".gallery a");
-// gallery.on("show.simplelightbox", function () {
-//   console.log(`asdsaa`);
-
-//   // Do something…
-// });
-
-// **Example**
-// ```javascript
-// let gallery = new SimpleLightbox(".gallery a");
-// gallery.on("show.simplelightbox", function () {
-//   // Do something…
-// });
-
-// gallery.on('error.simplelightbox', function (e) {
-// 	console.log(e); // Some usefull information
-// });
-
-// // with jQuery nearly the same
-// let gallery = $('.gallery a').simpleLightbox();
-// gallery.on('show.simplelightbox', function () {
-// 	// Do something…
-// });

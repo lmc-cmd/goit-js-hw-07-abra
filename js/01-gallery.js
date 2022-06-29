@@ -40,7 +40,7 @@ galleryEl.addEventListener(`click`, (e) => {
   const modalEl = document.querySelector(".basicLightbox");
   modalEl.addEventListener(`click`, (e) => {
     if (e.target.nodeName === `IMG`) {
-      console.dir(Event);
+      // console.dir(Event);
       instance.close(instance);
       modalEl.removeEventListener;
     }

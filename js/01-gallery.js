@@ -54,7 +54,7 @@ galleryEl.addEventListener(`click`, (e) => {
 //     instance.close(instance);
 //   }
 // });
-opacity: "1";
+// opacity: "1";
 // const ModalEl = document.querySelector(
 //   "body > div.basicLightbox.basicLightbox--visible > div > div > img"
 // );

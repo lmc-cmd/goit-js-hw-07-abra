@@ -11,6 +11,7 @@ const makeGallery = galleryItems.map((e) => {
   const makeItemLink = () => {
     const galleryItemLink = document.createElement(`a`);
     galleryItemLink.classList.add(`gallery__link`);
+    galleryItemLink.href = e.original;
     const makeImg = () => {
       const imgItem = document.createElement(`img`);
       imgItem.classList.add(`gallery__image`);
@@ -25,7 +26,7 @@ const makeGallery = galleryItems.map((e) => {
   galleryEl.append(makeItemLink());
   // return galarryItem;
 });
-galleryEl.append(...makeGallery);
+// galleryEl.append(...makeGallery);
 
 new SimpleLightbox(".gallery a", {
   captionDelay: 250,
@@ -34,12 +35,12 @@ new SimpleLightbox(".gallery a", {
   navtext: ["<~", "~>"],
 });
 
-{
-  /* <a class="gallery__item" href="large-image.jpg">
+// {
+/* <a class="gallery__item" href="large-image.jpg">
   <img class="gallery__image" src="small-image.jpg" alt="Image description" />
 </a>;
  */
-}
+// }
 
 // galleryEl.addEventListener(`click`, (e) => {
 //   gallery.on("show.simplelightbox");

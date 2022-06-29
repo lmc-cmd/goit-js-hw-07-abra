@@ -1,3 +1,4 @@
+// import * as basicLightbox from "basiclightbox";
 import { galleryItems } from "./gallery-items.js";
 // Change code below this line
 

@@ -1,6 +1,6 @@
 import { galleryItems } from "./gallery-items.js";
 // Change code below this line
-
+// import * as basicLightbox from "basiclightbox";
 const galleryEl = document.querySelector(".gallery");
 
 const makeGallery = galleryItems.map((e) => {
@@ -40,7 +40,7 @@ galleryEl.addEventListener(`click`, (e) => {
   const modalEl = document.querySelector(".basicLightbox");
   modalEl.addEventListener(`click`, (e) => {
     if (e.target.nodeName === `IMG`) {
-      // console.dir(Event);
+      // console.dir(modalEl);
       instance.close(instance);
       modalEl.removeEventListener;
     }
